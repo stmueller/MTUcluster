@@ -1,0 +1,11 @@
+Package: MTUcluster
+Type: Package
+Title: Clustering routines implemented for JAMOVI by the PSY 5220 class and other students at Michigan Technological University
+Version: 0.0.1
+Author: Shane T. Mueller 
+Maintainer: Shane T. Mueller <shanem@mtu.edu>
+Description: Supports various clustering and scaling algorithms for feature and distance-based multivariate analytics.
+License: gpl-2
+Encoding: UTF-8
+LazyData: true
+Imports: jmvcore (>= 0.4.0), R6, ggplot2
