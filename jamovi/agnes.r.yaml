@@ -1,0 +1,22 @@
+---
+name:  Agnes
+title: Hierarchical Clustering - Agglomerative
+jrs:   "1.1"
+
+items:
+    - name:  text
+      title: Hierarchical Clustering - Agglomerative
+      type:  Preformatted
+
+    - name:  plot
+      title: Dendrogram Plot
+      type:  Image
+      width: 400
+      height: 500
+      renderFun: .plot
+
+    - name: footer
+      title: About
+      type: Preformatted
+
+...

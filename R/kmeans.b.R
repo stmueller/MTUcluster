@@ -19,17 +19,19 @@ kmeansClass <- R6::R6Class(
 
             tab2$addColumn(name="cluster",title="Cluster ID",type='integer')
 
-            for(i in 1:nVars)
+            if(nVars>0)
             {
-                var <- vars[[i]]
-                tab2$addColumn(name = paste0(var),
+              for(i in 1:nVars)
+               {
+                 var <- vars[[i]]
+                 tab2$addColumn(name = paste0(var),
                                index = i,
                                type= 'number',
                                format='zto',visible=TRUE)
 
-            }
-
-
+               }
+              
+     
             values <- list(cluster=1)
 
             for(i in 1:nVars)
@@ -43,12 +45,13 @@ kmeansClass <- R6::R6Class(
                values[["cluster"]]<-j
                tab2$setRow(rowNo=j,values)
             }
+            }
               print("done initializing")
             },
 
 
         .run = function() {
-            print('.runnig"')
+            print('.running')
             text <- "started"
 
             if(!is.null(self$options$vars))
@@ -131,6 +134,8 @@ kmeansClass <- R6::R6Class(
                 # `self$options` contains the options
                 # `self$results` contains the results object (to populate)
             } else {
+              
+              
                 text <- cat(text, "Error in clustering analysis")
                 image <- self$results$plot
                 image$setState(NULL)
@@ -145,7 +150,8 @@ fixed number of classes, in an unsupervised fashion.  Each class is
 defined by its center on each feature/dimension, and each case is
 classified into its nearest class."
 
-            self$results$footer$content <- footer
+            f <- self$results$footer
+            f$content <- footer
 
             },
         .plot = function(image, ...)

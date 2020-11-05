@@ -1,0 +1,57 @@
+---
+name:  ClassicMDS
+title: MDS Classic Scaling (cmdscale)
+menuGroup: MTUCluster
+menuSubgroup: Scaling
+version: '1.0.0'
+jas: '1.1'
+
+
+options:
+    - name: data
+      type: Data
+
+    - name: vars # vars used to specify many vaiables at a time
+      title: Variables to scale
+      type: Variables
+      permitted: [continuous]
+      description: The variables to use.
+
+    - name: k
+      title: No. of Dimensions
+      default: 2
+      type: Integer
+      min: 1
+
+
+    
+    - name: label
+      type: Variable
+      title: "Point labels"
+        
+    - name: color
+      type: Variable
+      title: "Variable to map to color"
+      
+    - name: size
+      type: Variable
+      title: "Variable to map to point size"
+
+  
+    - name: dist
+      title: Distance Measure
+      type: List
+      options:
+        - euclidean
+        - manhattan
+      default: euclidean
+
+
+    - name: stand
+      title: Normalize Variables
+      type: Bool
+      default: FALSE
+      
+...
+
+      

@@ -1,0 +1,21 @@
+---
+name:  Diana
+title: Hierarchical Clustering - Divisive
+jrs:   "1.1"
+
+items:
+    - name:  text
+      title: Hierarchical Clustering - Divisive
+      type:  Preformatted
+      
+    - name:  plot
+      title: Dendrogram Plot
+      type:  Image
+      width: 400
+      height: 500
+      renderFun: .plot
+
+    - name: footer
+      title: About
+      type: Preformatted
+...

@@ -1,22 +1,46 @@
 ---
-title: Clustering with Jamovi
+title: >-
+  Clustering routines implemented for JAMOVI by the PSY 5220 class and other
+  students at Michigan Technological University
 name: MTUcluster
 version: 0.0.1
 jms: '1.0'
 authors:
-  - Shane T. Mueller
-maintainer: The package maintainer <shanem@mtu.edu>
+  - >-
+    Revanth Chappidi, Dhairya Kothari, Akshay Gaonkar, Bharath Inti (agnes &
+    diana), Shane Mueller (kmeans),  Lavanya Rajesh Kumar (classic
+    multidimensional scaling)
+maintainer: Shane T. Mueller <shanem@mtu.edu>
 date: '2017-03-29'
 type: R
 description: >-
-  Provides various clustering methods supported by core R functions, MASS, and
-  cluster libraries. Implemented by Michigan Technological University students
-  involved in  PSY 5220.
+  Supports various clustering (K-means, Agnes and Diana) and scaling algorithms
+  for feature and distance-based multivariate analytics. Implemented by Michigan
+  Technological University students involved in  PSY 5220.
 analyses:
   - title: k-means clustering
     name: kmeans
-    ns: MTUcluster
-    menuGroup: MTUcluster
+    ns: MTUCluster
+    menuGroup: MTUCluster
+    menuSubgroup: Clustering
     menuTitle: k-means clustering
+  - title: Hierarchical Clustering - Agglomerative
+    name: Agnes
+    ns: MTUCluster
+    menuGroup: MTUCluster
+    menuSubgroup: Clustering
+    menuTitle: Hierarchical Clustering - Agglomerative
+  - title: Hierarchical Clustering - Divisive
+    name: Diana
+    ns: MTUCluster
+    menuGroup: MTUCluster
+    menuSubgroup: Clustering
+    menuTitle: Hierarchical Clustering - Divisive
+  - title: MDS Classic Scaling (cmdscale)
+    name: ClassicMDS
+    ns: MTUCluster
+    menuGroup: MTUCluster
+    menuSubgroup: Scaling
+    menuTitle: MDS Classic Scaling (cmdscale)
 
 ...

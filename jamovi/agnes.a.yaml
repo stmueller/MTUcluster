@@ -1,0 +1,50 @@
+---
+name:  Agnes
+title: Hierarchical Clustering - Agglomerative
+menuGroup: MTUCluster
+menuSubgroup: Clustering
+version: '1.0.0'
+jas: '1.1'
+
+options:
+    - name: data
+      type: Data
+
+    - name: vars
+      title: Variables to cluster
+      type: Variables
+      description: The variables to use.
+
+    - name: labels
+      title: Labels for dendrogram
+      type: Variable
+      
+    - name: distan
+      title: The Distance measure to be used
+      type: List
+      options:
+        - euclidean
+        - maximum
+        - manhattan
+        - canberra
+        - binary
+        - minkowski
+      default: euclidean
+      
+    - name: algo
+      title: Type of Linkage
+      type: List
+      options:
+        - single
+        - complete
+        - average
+        - weighted
+        - ward
+      default: average
+
+      
+    - name: stand
+      title: Normalize Variables
+      type: Bool
+      default: FALSE
+...

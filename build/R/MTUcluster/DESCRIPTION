@@ -1,0 +1,14 @@
+Package: MTUcluster
+Type: Package
+Title: Clustering routines implemented for JAMOVI by the PSY 5220 class
+        and other students at Michigan Technological University
+Version: 0.0.1
+Authors: Revanth Chappidi, Dhairya Kothari, Akshay Gaonkar, Bharath
+        Inti (agnes & diana), Shane Mueller (kmeans)
+Maintainer: Dr. Shane T. Mueller <shanem@mtu.edu>
+Description: Supports various clustering (K-means, Agnes and Diana) and scaling algorithms for feature and distance-based multivariate analytics.
+License: gpl-2
+Encoding: UTF-8
+LazyData: true
+Imports: jmvcore (>= 0.4.0), R6, ggplot2, cluster, ggdendro
+Built: R 3.3.1; ; 2017-04-29 18:13:30 UTC; windows

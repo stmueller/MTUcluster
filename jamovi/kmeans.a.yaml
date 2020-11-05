@@ -1,7 +1,8 @@
 ---
 name:  kmeans
 title: k-means clustering
-menuGroup: MTUcluster
+menuGroup: MTUCluster
+menuSubgroup: Clustering
 version: '1.0.1'
 jas: '1.1'
 

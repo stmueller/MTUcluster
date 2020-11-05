@@ -1,50 +1,40 @@
-title: kmeans
+title: k-means clustering
 name: kmeans
-jus: '1.0'
+jus: '2.0'
 stage: 0
+compilerMode: aggressive
 children:
   - type: VariableSupplier
     persistentItems: false
     stretchFactor: 1
     children:
-      - type: VariableTargetListBox
-        name: vars
+      - type: TargetLayoutBox
         label: Variables to cluster
-        showColumnHeaders: false
-        fullRowSelect: true
-        columns:
-          - type: ListItem.VariableLabel
-            name: column1
-            label: ''
-            stretchFactor: 1
+        children:
+          - type: VariablesListBox
+            name: vars
+            isTarget: true
   - type: LayoutBox
     margin: large
     children:
-      - name: k
-        type: TextBox
-        label: Number of groups (k)
-        format: number
-        inputPattern: '[0-9]+'
-      - name: algo
-        type: ComboBox
-        label: Algorithm
-        options:
-          - label: Hartigan-Wong
-            value: Hartigan-Wong
-          - label: Lloyd
-            value: Lloyd
-          - label: Forgy
-            value: Forgy
-          - label: MacQueen
-            value: MacQueen
-      - name: nstart
-        type: TextBox
-        label: Number of random starting configurations
+      - type: TextBox
+        name: k
         format: number
         inputPattern: '[0-9]+'
   - type: LayoutBox
     margin: large
     children:
-      - name: stand
-        type: CheckBox
-        label: Standardize Variables
+      - type: ComboBox
+        name: algo
+  - type: LayoutBox
+    margin: large
+    children:
+      - type: TextBox
+        name: nstart
+        format: number
+        inputPattern: '[0-9]+'
+  - type: LayoutBox
+    margin: large
+    children:
+      - type: CheckBox
+        name: stand
